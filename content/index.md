@@ -1,0 +1,5 @@
+---
+title: welcome to my notebook
+---
+
+this section of my site is a repository of notes i created while learning how to code my site. i'm pretty bad at remember how i did things or the exact names of commands, so i end up documenting everything i do so i can replicate things later. most of the improvements and optimizations i've made to my site were made after coming across blog posts and coding tip sections on random peoples sites, and i've found reading other people's documentation of their own workflow to be extremely helpful in learning how to use tools like eleventy and deploy to neocities, so i thought i ought to pay it back and [learn in public](https://www.swyx.io/learn-in-public) for anyone who may stumble across my own website. i also publish some of my notes on things not specific to website building if i think they may be of interest to others.

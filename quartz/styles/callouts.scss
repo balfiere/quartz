@@ -3,7 +3,7 @@
 
 .callout {
   border: 1px solid var(--border);
-  background-color: var(--bg);
+  background-color: transparent;
   border-radius: 5px;
   padding: 0 1rem;
   overflow-y: hidden;
@@ -38,23 +38,23 @@
   --callout-icon-fold: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E');
 
   &[data-callout] {
-    --color: #448aff;
-    --border: #448aff44;
+    --color: #86a3d2;
+    --border: #86a3d244;
     --bg: #448aff10;
     --callout-icon: var(--callout-icon-note);
   }
 
   &[data-callout="abstract"] {
-    --color: #00b0ff;
-    --border: #00b0ff44;
+    --color: #7cbad6;
+    --border: #7cbad644;
     --bg: #00b0ff10;
     --callout-icon: var(--callout-icon-abstract);
   }
 
   &[data-callout="info"],
   &[data-callout="todo"] {
-    --color: #00b8d4;
-    --border: #00b8d444;
+    --color: #74b9c3;
+    --border: #74b9c344;
     --bg: #00b8d410;
     --callout-icon: var(--callout-icon-info);
   }
@@ -64,29 +64,29 @@
   }
 
   &[data-callout="tip"] {
-    --color: #00bfa5;
-    --border: #00bfa544;
+    --color: #67c3b7;
+    --border: #67c3b744;
     --bg: #00bfa510;
     --callout-icon: var(--callout-icon-tip);
   }
 
   &[data-callout="success"] {
-    --color: #09ad7a;
-    --border: #09ad7144;
+    --color: #60b097;
+    --border: #60b09744;
     --bg: #09ad7110;
     --callout-icon: var(--callout-icon-success);
   }
 
   &[data-callout="question"] {
-    --color: #dba642;
-    --border: #dba64244;
+    --color: #c1a878;
+    --border: #c1a87844;
     --bg: #dba64210;
     --callout-icon: var(--callout-icon-question);
   }
 
   &[data-callout="warning"] {
-    --color: #db8942;
-    --border: #db894244;
+    --color: #ce9f77;
+    --border: #ce9f7744;
     --bg: #db894210;
     --callout-icon: var(--callout-icon-warning);
   }
@@ -94,8 +94,8 @@
   &[data-callout="failure"],
   &[data-callout="danger"],
   &[data-callout="bug"] {
-    --color: #db4242;
-    --border: #db424244;
+    --color: #ae6d6d;
+    --border: #ae6d6d44;
     --bg: #db424210;
     --callout-icon: var(--callout-icon-failure);
   }
@@ -109,8 +109,8 @@
   }
 
   &[data-callout="example"] {
-    --color: #7a43b5;
-    --border: #7a43b544;
+    --color: #876ca3;
+    --border: #876ca344;
     --bg: #7a43b510;
     --callout-icon: var(--callout-icon-example);
   }
