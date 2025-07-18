@@ -5,6 +5,7 @@
 @use "./callouts.scss";
 
 
+
 html {
   scroll-behavior: smooth;
   text-size-adjust: none;
@@ -96,6 +97,10 @@ a {
 
   &.internal {
     text-decoration: none;
+    background-image: linear-gradient(var(--highlight), var(--highlight));
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: 100% 6px;
     background-image: linear-gradient(var(--highlight), var(--highlight));
     background-position: 50% 80%;
     background-repeat: no-repeat;
@@ -367,6 +372,7 @@ h5,
 h6,
 thead {
   font-family: "DM Serif Display";
+  font-family: "DM Serif Display";
   color: var(--dark);
   font-weight: revert;
   margin-bottom: 0;
@@ -388,6 +394,7 @@ h6 {
     opacity: 0;
     transition: opacity 0.2s ease;
     transform: translateY(-0.1rem);
+    font-family: "IBM Plex Mono";
     font-family: "IBM Plex Mono";
     user-select: none;
   }
@@ -436,6 +443,7 @@ figure[data-rehype-pretty-code-figure] {
 
   & > [data-rehype-pretty-code-title] {
     font-family: "IBM Plex Mono";
+    font-family: "IBM Plex Mono";
     font-size: 0.9rem;
     padding: 0.1rem 0.5rem;
     border: 1px solid var(--lightgray);
@@ -451,6 +459,7 @@ figure[data-rehype-pretty-code-figure] {
 }
 
 pre {
+  font-family: "IBM Plex Mono";
   font-family: "IBM Plex Mono";
   padding: 0 0.5rem;
   border-radius: 5px;
@@ -511,6 +520,7 @@ pre {
 code {
   font-size: 0.9em;
   color: var(--dark);
+  font-family: "IBM Plex Mono";
   font-family: "IBM Plex Mono";
   border-radius: 5px;
   padding: 0.1rem 0.2rem;

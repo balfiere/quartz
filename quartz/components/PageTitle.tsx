@@ -13,6 +13,12 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
       </h1>
       <h4 class="go-back"><a href="/main/index.html">back to personal site home</a></h4>
     </div>
+    <div>
+      <h1 class={classNames(displayClass, "page-title")}>
+        <a href={baseDir}>{title}</a>
+      </h1>
+      <h4 class="go-back"><a href="/main/index.html">back to personal site home</a></h4>
+    </div>
   )
 }
 

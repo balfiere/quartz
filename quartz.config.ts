@@ -13,7 +13,9 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
+    analytics: null,
     locale: "en-US",
+    baseUrl: "kwaamfan.neocities.org/notes",
     baseUrl: "kwaamfan.neocities.org/notes",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
@@ -21,6 +23,8 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
+        header: "DM Serif Display",
+        body: "IBM Plex Sans Thai",
         header: "DM Serif Display",
         body: "IBM Plex Sans Thai",
         code: "IBM Plex Mono",
