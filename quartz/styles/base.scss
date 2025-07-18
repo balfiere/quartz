@@ -95,7 +95,14 @@ a {
 
   &.internal {
     text-decoration: none;
-    background-color: var(--highlight);
+    background-image: linear-gradient(var(--highlight), var(--highlight));
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: 100% 6px;
+    background-image: linear-gradient(var(--highlight), var(--highlight));
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: 100% 6px;
     padding: 0 0.1rem;
     border-radius: 5px;
     line-height: 1.4rem;
