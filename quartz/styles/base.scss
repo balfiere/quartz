@@ -94,18 +94,20 @@ a {
   }
 
   &.internal {
-    text-decoration: none;
-    background-image: linear-gradient(var(--highlight), var(--highlight));
-    background-position: 50% 80%;
-    background-repeat: no-repeat;
-    background-size: 100% 6px;
-    background-image: linear-gradient(var(--highlight), var(--highlight));
-    background-position: 50% 80%;
-    background-repeat: no-repeat;
-    background-size: 100% 6px;
-    padding: 0 0.1rem;
-    border-radius: 5px;
-    line-height: 1.4rem;
+    &:not(.tag-link) {
+      text-decoration: none;
+      background-image: linear-gradient(var(--highlight), var(--highlight));
+      background-position: 50% 80%;
+      background-repeat: no-repeat;
+      background-size: 100% 6px;
+      background-image: linear-gradient(var(--highlight), var(--highlight));
+      background-position: 50% 80%;
+      background-repeat: no-repeat;
+      background-size: 100% 6px;
+      padding: 0 0.1rem;
+      border-radius: 5px;
+      line-height: 1.4rem;
+    }
 
     &.broken {
       color: var(--secondary);

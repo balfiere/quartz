@@ -23,7 +23,7 @@ const config: QuartzConfig = {
       typography: {
         header: "DM Serif Display",
         body: "IBM Plex Sans Thai",
-        code: "IBM Plex Mono",
+        code: "Space Mono",
       },
       colors: {
         lightMode: {
@@ -32,10 +32,10 @@ const config: QuartzConfig = {
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
           dark: "#2b2b2b",
-          secondary: "#9d8bcc",
-          tertiary: "#9B9B7A",
-          highlight: "rgba(155,155,122, 0.25)",
-          textHighlight: "#fff23688",
+          secondary: "#9d95d6ff",
+          tertiary: "#544987ff",
+          highlight: "rgba(184, 217, 170, 0.25)",
+          textHighlight: "#a7e48f88",
         },
         darkMode: {
           light: "#161618",
@@ -44,9 +44,9 @@ const config: QuartzConfig = {
           darkgray: "#d4d4d4",
           dark: "#ebebec",
           secondary: "#9d8bcc",
-          tertiary: "#9B9B7A",
-          highlight: "rgba(121,125,98, 0.25)",
-          textHighlight: "#b3aa0288",
+          tertiary: "#ccbdf3ff",
+          highlight: "rgba(97, 116, 94, 0.25)",
+          textHighlight: "#77be5b88",
         },
       },
     },
@@ -59,19 +59,21 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "github-light",
-          dark: "github-dark",
+          light: "tokyo-night",
+          dark: "tokyo-night",
         },
-        keepBackground: false,
+        keepBackground: true,
       }),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: true }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
-    filters: [Plugin.RemoveDrafts()],
+    filters: [
+      Plugin.ExplicitPublish(),
+    ],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
@@ -84,10 +86,10 @@ const config: QuartzConfig = {
       }),
       Plugin.Assets(),
       Plugin.Static(),
-      Plugin.Favicon(),
+      // Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // Plugin.CustomOgImages(),
     ],
   },
 }
