@@ -7,7 +7,7 @@ tags: [language_learning, linux]
 ---
 
 
-i use the python progam [subtitle hider](https://github.com/Bennycopter/subtitle-hider) to blur english subtitles hardcoded into videos i want to watch in a language i'm learning. under "releases" there's also a precompiled windows .exe. since it creates a new window, it's compatible with any video player app, website, etc.
+i use the python program [subtitle hider](https://github.com/Bennycopter/subtitle-hider) to blur english subtitles hardcoded into videos i want to watch in a language i'm learning. under "releases" there's also a precompiled windows .exe. since it creates a new window, it's compatible with any video player app, website, etc.
 
 in hyprland, i use the following settings to launch the program with a keybind using my preferred settings and location. (the title has been changed from `main.py` to `subtitle_hider.py` and saved in `~/scripts`)
 
