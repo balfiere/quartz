@@ -4,7 +4,6 @@ title: hiding hard subtitles
 tags: [language_learning, linux]
 ---
 
-# hiding hard subtitles
 
 i use [subtitle hider](https://github.com/Bennycopter/subtitle-hider) to blur english subtitles hardcoded into videos i want to watch in a language i'm learning. since it creates a new window, it's compatible with any video player app, website, etc.
 

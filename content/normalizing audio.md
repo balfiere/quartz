@@ -1,11 +1,8 @@
 ---
-tags:
-  - linux
-  - language_learning
+tags: [language_learning, linux]
 publish: true
 ---
 
-# normalizing audio
 
 i use ffmpeg to normalize the audio of my media files, particularly anything i want to [sentence mine](https://tatsumoto-ren.github.io/blog/sentence-mining.html). i also like to normalize my anki media folder every month or so. be sure you're on an up-to-date build of ffmpeg to use the following methods. (see [[updating ffmpeg]] for how i updated ffmpeg on pop os, which should work on other debian based distributions)
 
