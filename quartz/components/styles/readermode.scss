@@ -9,12 +9,13 @@
   margin: 0;
   text-align: inherit;
   flex-shrink: 0;
+  vertical-align: middle;
 
   & svg {
     position: absolute;
     width: 20px;
     height: 20px;
-    top: calc(50% - 10px);
+    top: calc(50% - 14px);
     fill: var(--darkgray);
     stroke: var(--darkgray);
     transition: opacity 0.1s ease;

@@ -40,7 +40,5 @@ Example customization in your custom CSS:
   svg {
     stroke: var(--custom-color);
   }
-  vertical-align: middle;
-  margin-top: 2px;
 }
 ```
