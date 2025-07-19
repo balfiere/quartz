@@ -1,4 +1,6 @@
 ---
+created: 2025-07-17T22:32:06.066-05:00
+modified: 2025-07-19T00:24:28.2828-05:00
 tags: []
 publish: true
 title: welcome to my notebook
