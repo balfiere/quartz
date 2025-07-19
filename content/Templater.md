@@ -3,7 +3,7 @@ tags: [obsidian]
 publish: true
 ---
 
-[Templater](https://silentvoid13.github.io/Templater/introduction.html) is an Obsidian extension that can be used to automate the creation of notes and automatically sort them based on prompts]. i use it extensively to quickly create [literature notes](https://zk.zettel.page/types-of-notes#2-literature-notes).
+[Templater](https://silentvoid13.github.io/Templater/introduction.html) is an Obsidian extension that can be used to automate the creation of notes and automatically sort them based on prompts. i use it extensively to quickly create [literature notes](https://zk.zettel.page/types-of-notes#2-literature-notes).
 
 ## system prompts with Templater
 
