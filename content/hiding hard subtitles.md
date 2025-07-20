@@ -1,6 +1,6 @@
 ---
 created: 2025-07-18T16:49:59.5959-05:00
-modified: 2025-07-19T16:43:01.011-05:00
+modified: 2025-07-19T16:45:12.1212-05:00
 publish: true
 title: hiding hard subtitles
 tags: [language_learning, linux]
