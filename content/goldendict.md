@@ -2,7 +2,7 @@
 tags: [language_learning]
 publish: true
 created: 2025-07-19T20:27:54.5454-05:00
-modified: 2025-07-19T20:43:39.3939-05:00
+modified: 2025-09-03T00:09:56.5656-05:00
 ---
 
 [goldendict-ng](https://xiaoyifang.github.io/goldendict-ng/) is a program for windows, mac, and linux that allows the user to install their own dictionaries to look up words instantly. even though i mainly use yomitan to look words up in a browser, i still find it handy to have another dictionary service to fall back on when i want to looking something up outside of my browser.
@@ -45,9 +45,9 @@ clipboard=$(wl-paste | tr -d '[:space:]')
 goldendict-ng $clipboard
 ```
 
-on x11, change `wl-paste` with `xclip`. i find stripping the whitespace helpful when reading a pdf that's been [[ocr]]'d, since i find `ocrmypdf` often adds whitespace characters inside of words to keep the location of the invisible text layer in the same spot as the original document.
+on x11, change `wl-paste` with `xclip`. i find stripping the whitespace helpful when reading a pdf that's been [[ocr for language learning|ocr]]'d, since i find `ocrmypdf` often adds whitespace characters inside of words to keep the location of the invisible text layer in the same spot as the original document.
 
-goldendict also supports clipboard monitoring i.e. every time you copy something the goldendict window will pop up with a translation for whatever was copied. i usually recommend having it off, then turning it on when reading manga, playing games, etc where you use [[ocr]] tools that send the output to the clipboard to expedite the word lookup process. 
+goldendict also supports clipboard monitoring i.e. every time you copy something the goldendict window will pop up with a translation for whatever was copied. i usually recommend having it off, then turning it on when reading manga, playing games, etc where you use [[ocr for language learning|ocr]] tools that send the output to the clipboard to expedite the word lookup process. 
 
 ## custom styling: multiple font support
 

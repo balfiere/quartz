@@ -1,8 +1,9 @@
 ---
-tags: [language_learning, linux]
+tags: [language_learning, linux, scripts]
 publish: true
 created: 2025-07-19T20:26:46.4646-05:00
-modified: 2025-07-19T20:38:02.022-05:00
+modified: 2025-09-03T00:10:09.099-05:00
+aliases: [ocr]
 ---
 
 the following are the programs and scripts i use to make looking up words easier when reading manga, webtoons, or books in pdf format.
