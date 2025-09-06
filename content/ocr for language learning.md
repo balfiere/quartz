@@ -53,16 +53,16 @@ from gradio_client import Client, handle_file
 import subprocess
 
 # remove old screenshot
-subprocess.run(["rm", "/home/balfiere/Pictures/Screenshots/thaiOCR.png"]) 
+subprocess.run(["rm", "~/Pictures/Screenshots/thaiOCR.png"]) 
 
 # take screenshot
-subprocess.run(["grimblast", "--notify", "save", "area", "/home/balfiere/Pictures/Screenshots/thaiOCR.png"])
+subprocess.run(["grimblast", "--notify", "save", "area", "~/Pictures/Screenshots/thaiOCR.png"])
 
 # run ocr in huggingface space: https://huggingface.co/spaces/phoner45/thai-ocr-img
 # works best if text only spans one line
 client = Client("phoner45/thai-ocr-img")
 result = client.predict(
-		image=handle_file('/home/balfiere/Pictures/Screenshots/thaiOCR.png'),
+		image=handle_file('~/Pictures/Screenshots/thaiOCR.png'),
 		api_name="/predict"
 )
 

@@ -25,7 +25,7 @@ body {
   border-radius: 5px;
 }
 ::selection {
-  background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
+  background: color-mix(in srgb, var(--textHighlight) 60%, rgba(255, 255, 255, 0));
   color: var(--darkgray);
 }
 
@@ -86,27 +86,49 @@ strong {
 a {
   font-weight: $semiBoldWeight;
   text-decoration: none;
-  transition: color 0.2s ease;
-  color: var(--secondary);
+  transition: all 0.2s ease;
 
+  color: var(--secondary);
   &:hover {
     color: var(--tertiary);
   }
 
   &.internal {
+
+    &.tag-link {
+      border-radius: 8px;
+      // background-color: var(--highlight);
+      padding: 0.2rem 0.4rem;
+      margin: 0 0.1rem;
+      background: linear-gradient(90deg, rgb(135, 124, 219) 0%, var(--secondary) 100%) var(--highlight) no-repeat right bottom / 0 var(--bg-h);
+      transition: background-size 600ms ease, color 600ms ease;
+      --bg-h: 100%;
+      color: var(--secondary);
+      &:hover {
+        background-size: 100% var(--bg-h);
+        background-position-x: left;
+        color: var(--lightgray);
+      }
+    }
+
     &:not(.tag-link) {
-      text-decoration: none;
-      background-image: linear-gradient(var(--highlight), var(--highlight));
-      background-position: 50% 80%;
-      background-repeat: no-repeat;
-      background-size: 100% 6px;
-      background-image: linear-gradient(var(--highlight), var(--highlight));
-      background-position: 50% 80%;
-      background-repeat: no-repeat;
-      background-size: 100% 6px;
-      padding: 0 0.1rem;
-      border-radius: 5px;
-      line-height: 1.4rem;
+      // text-decoration: none;
+      // background-image: linear-gradient(var(--highlight), var(--highlight));
+      // background-position: 50% 80%;
+      // background-repeat: no-repeat;
+      // background-size: 100% 6px;
+      // padding: 0 0.1rem;
+      // border-radius: 5px;
+      // line-height: 1.4rem;
+      background: linear-gradient(45deg, rgb(135, 124, 219) 0%,rgb(183, 113, 211) 42.86%,rgb(255, 111, 202) 100%) no-repeat right bottom / 0 var(--bg-h);
+      transition: background-size 450ms, color 450ms;
+      --bg-h: 3px;
+      color: var(--quaternary);
+      &:hover {
+        background-size: 100% var(--bg-h);
+        background-position-x: left;
+        color: var(--secondary);
+      }
     }
 
     &.broken {
@@ -127,6 +149,18 @@ a {
       &::before {
         content: "#";
       }
+    }
+  }
+
+  &.external {
+    color: var(--tertiary);
+    background: linear-gradient(45deg, rgb(135, 124, 219) 0%,rgb(136, 145, 201) 42.86%, rgb(126, 185, 240) 100%) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 450ms, color 450ms;
+    --bg-h: 3px;
+    &:hover {
+      background-size: 100% var(--bg-h);
+      background-position-x: left;
+      color: var(--secondary);
     }
   }
 
@@ -525,7 +559,7 @@ code {
 tbody,
 li,
 p {
-  line-height: 1.6rem;
+  line-height: 1.8rem;
 }
 
 .table-container {
@@ -650,3 +684,91 @@ iframe.pdf {
   transition: width 0.2s ease;
   z-index: 9999;
 }
+
+// dark mode
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     background-color: var(--dark);
+//     color: var(--light);
+//   }
+
+//   ::selection {
+//     color: var(--lightgray);
+//   }
+
+//   p,
+//   ul,
+//   text,
+//   a,
+//   tr,
+//   td,
+//   li,
+//   ol,
+//   ul,
+//   .katex,
+//   .math {
+//     color: var(--lightgray);
+//     fill: var(--lightgray);
+//     hyphens: auto;
+//   }
+
+//   .page {
+//     p > strong {
+//       color: var(--light);
+//     }
+//   }
+
+//   .footnotes {
+//     border-top: 1px solid var(--darkgray);
+//   }
+
+//   input[type="checkbox"] {
+//     border: 1px solid var(--darkgray);
+//     background-color: var(--dark);
+//     &:checked {
+//       &::after {
+//         border: solid var(--dark);
+//       }
+//     }
+//   }
+
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   h6,
+//   thead {
+//     color: var(--light);
+//     article > & > a[role="anchor"] {
+//       color: var(--light);
+//     }
+//   }
+
+//   figure[data-rehype-pretty-code-figure] {
+//     & > [data-rehype-pretty-code-title] {
+//       border: 1px solid var(--darkgray);
+//       color: var(--lightgray);
+//     }
+//   }
+
+//   pre {
+//     border: 1px solid var(--darkgray);
+//   }
+
+//   code {
+//     color: var(--light);
+//     background: var(--darkgray);
+//   }
+
+//   tr {
+//     border-bottom: 1px solid var(--darkgray);
+//     &:last-child {
+//       border-bottom: none;
+//     }
+//   }
+
+//   hr {
+//     background-color: var(--darkgray);
+//   }
+// }

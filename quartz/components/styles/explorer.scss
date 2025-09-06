@@ -129,6 +129,10 @@ button.desktop-explorer {
         opacity: 1;
         color: var(--tertiary);
       }
+
+      &:hover {
+        color: var(--quaternary);
+      }
     }
   }
 
@@ -268,3 +272,51 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
     overscroll-behavior: none;
   }
 }
+
+// dark mode
+// @media (prefers-color-scheme: dark) {
+//   @media all and ($mobile) {
+//     .page > #quartz-body {
+//       .sidebar.left:has(.explorer) {
+//         background-color: var(--dark);
+//       }
+//     }
+//   }
+
+//   button.mobile-explorer,
+//   button.desktop-explorer {
+//     color: var(--light);
+//   }
+
+//   .explorer-content {
+//     & ul {
+//       & li > a {
+//         color: var(--light);
+//       }
+//     }
+
+//     .folder-outer > ul {
+//       border-left: 1px solid var(--lightgray);
+//     }
+//   }
+
+//   .folder-container {
+//     & div > button {
+//       color: var(--light);
+//     }
+//   }
+
+//   .explorer {
+//     @media all and ($mobile) {
+//       .explorer-content {
+//         background-color: var(--dark);
+//       }
+
+//       .mobile-explorer {
+//         .lucide-menu {
+//           stroke: var(--lightgray);
+//         }
+//       }
+//     }
+//   }
+// }

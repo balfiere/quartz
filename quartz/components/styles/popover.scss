@@ -87,3 +87,12 @@
   animation-fill-mode: forwards;
   animation-delay: 0.2s;
 }
+
+// @media (prefers-color-scheme: dark) {
+//   .popover {
+//     & > .popover-inner {
+//       border: 1px solid var(--darkgray);
+//       background-color: var(--dark);
+//     }
+//   }
+// }

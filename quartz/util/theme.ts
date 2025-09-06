@@ -6,6 +6,7 @@ export interface ColorScheme {
   dark: string
   secondary: string
   tertiary: string
+  quaternary: string
   highlight: string
   textHighlight: string
 }
@@ -152,6 +153,7 @@ ${stylesheet.join("\n\n")}
   --dark: ${theme.colors.lightMode.dark};
   --secondary: ${theme.colors.lightMode.secondary};
   --tertiary: ${theme.colors.lightMode.tertiary};
+  --quaternary: ${theme.colors.lightMode.quaternary};
   --highlight: ${theme.colors.lightMode.highlight};
   --textHighlight: ${theme.colors.lightMode.textHighlight};
 
@@ -169,6 +171,7 @@ ${stylesheet.join("\n\n")}
   --dark: ${theme.colors.darkMode.dark};
   --secondary: ${theme.colors.darkMode.secondary};
   --tertiary: ${theme.colors.darkMode.tertiary};
+  --quaternary: ${theme.colors.darkMode.quaternary};
   --highlight: ${theme.colors.darkMode.highlight};
   --textHighlight: ${theme.colors.darkMode.textHighlight};
 }
