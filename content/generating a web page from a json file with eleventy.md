@@ -2,7 +2,7 @@
 tags: [11ty, site_building]
 publish: false
 created: 2025-09-13T00:03:55.5555-05:00
-modified: 2025-09-13T00:23:28.2828-05:00
+modified: 2025-09-13T01:49:38.3838-05:00
 ---
 
 this is a tutorial on how i generate my [articles](https://kwaamfan.neocities.org/articles/) page from a json file using eleventy. it assumes you already have eleventy installed; if not, [this tutorial](https://whiona.weblog.lol/2023/10/my-neocities-workflow-using-eleventy-and-the-cli-to-speed-up-development) is good at walking you through the initial set up. knowing some basic programming concepts, particularly for loops and arrays, is recommended, but i've tried to explain things so you can still follow along even if you've never programmed before.
@@ -234,3 +234,7 @@ the final file looks like
     </body>
 </html>
 ```
+
+## generating more complex pages
+
+while i've only shown an example with a json file that has a single object, your json file can have as many objects as you want. you can also have more than one for loop, plus do other things such as if statements, modifying objects with [filters](https://shopify.github.io/liquid/basics/introduction/#filters), etc. for a more complex example, feel free to look at how i use eleventy to build my about page [here](https://github.com/balfiere/neocities/tree/main/eleventy/about).

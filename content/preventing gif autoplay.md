@@ -1,8 +1,8 @@
 ---
-tags: [html_css]
+tags: [html_css, site_building]
 publish: true
 created: 2025-09-02T23:46:18.1818-05:00
-modified: 2025-09-13T00:15:16.1616-05:00
+modified: 2025-09-13T01:44:19.1919-05:00
 ---
 
 there are multiple ways to stop gifs from autoplaying on a webpage. i've seen a lot of people on neocities using [freezeframe.js](https://github.com/ctrl-freaks/freezeframe.js), but in my experience gifs can still play until the page is fully loaded. on pages with lots of gifs, that's still a lot of animation that can get played, so here's my preference on how to get around the issue.
