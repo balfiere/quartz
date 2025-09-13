@@ -1,8 +1,8 @@
 ---
-tags: [site_building]
+tags: [html_css]
 publish: true
 created: 2025-09-03T00:15:50.5050-05:00
-modified: 2025-09-03T00:25:13.1313-05:00
+modified: 2025-09-13T00:10:14.1414-05:00
 ---
 
 you can create collapsible sections in html without javascript by using the `details` tag. here's how i style my `details` and `summary` tag to make it look the same as my normal headers.

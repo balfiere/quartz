@@ -1,7 +1,7 @@
 ---
 created: 2025-07-18T17:54:40.4040-05:00
-modified: 2025-07-19T20:57:11.1111-05:00
-tags: [site_building]
+modified: 2025-09-13T00:22:42.4242-05:00
+tags: [media/image, media/video, site_building]
 publish: true
 ---
 

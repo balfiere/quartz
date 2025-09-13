@@ -1,8 +1,8 @@
 ---
-tags: [site_building]
+tags: [media/image, site_building]
 publish: true
 created: 2025-09-02T23:51:07.077-05:00
-modified: 2025-09-02T23:59:35.3535-05:00
+modified: 2025-09-13T00:22:32.3232-05:00
 ---
 
 the following commands are the most common [ImageMagick](https://imagemagick.org/) commands i use. when i used windows 11 i needed to add `magick` first (so for example `magick mogrify -format jpg image.png`) for the commands to work but i can use commands like `mogrify`, `convert`, etc directly in linux.

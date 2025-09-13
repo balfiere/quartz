@@ -1,8 +1,8 @@
 ---
-tags: [scripts, site_building]
+tags: [media/image, scripts, site_building]
 publish: true
 created: 2025-09-02T23:47:12.1212-05:00
-modified: 2025-09-03T00:05:33.3333-05:00
+modified: 2025-09-13T00:22:30.3030-05:00
 ---
 
 i use a script to batch write all gifs in a folder to html, using the `<picture>` tag and `media="(prefers-reduced-motion)"` to load a png if the user [[preventing gif autoplay#prefers-reduced-motion|prefers reduced motion]].

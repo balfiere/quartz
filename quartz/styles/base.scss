@@ -91,42 +91,48 @@ a {
   color: var(--secondary);
   &:hover {
     color: var(--tertiary);
+    --svg: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.3 6">\
+        <path class="st0" d="M-5.5,3.8C-4.2,4.8-2.8,6,0,6s4.2-1.2,5.5-2.2C6.6,2.8,7.6,2,9.7,2s3,0.8,4.2,1.8c1.3,1,2.7,2.2,5.5,2.2  s4.2-1.2,5.5-2.2l-1.4-0.9c-1.1,1-2.1,1.8-4.2,1.8s-3-0.8-4.2-1.8c-1.2-1-2.7-2.2-5.4-2.2c-2.8,0-4.2,1.2-5.5,2.2  C3,3.9,2.1,4.7,0,4.7s-3-0.8-4.2-1.8L-5.5,3.8z" fill="saddlebrown"/>\
+    </svg>');
+      background-image: var(--svg);
+      background-size: 1rem 1rem;
+      background-repeat: repeat;
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-repeat: repeat-x;
+      background-position: 2px 1rem;
+      animation: move 15s linear infinite;
+      -webkit-animation: move 15s linear infinite;
+      animation-play-state: paused;
+      text-decoration: none;
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects;
+      animation-play-state: running;
   }
 
-  &.internal {
-
-    &.tag-link {
-      border-radius: 8px;
-      // background-color: var(--highlight);
-      padding: 0.2rem 0.4rem;
-      margin: 0 0.1rem;
-      background: linear-gradient(90deg, rgb(135, 124, 219) 0%, var(--secondary) 100%) var(--highlight) no-repeat right bottom / 0 var(--bg-h);
-      transition: background-size 600ms ease, color 600ms ease;
-      --bg-h: 100%;
-      color: var(--secondary);
-      &:hover {
-        background-size: 100% var(--bg-h);
-        background-position-x: left;
-        color: var(--lightgray);
+    @-webkit-keyframes move {
+    from {
+        background-position: 2px 1rem;
+      }
+      to {
+        background-position: 500px 1rem;
       }
     }
 
+    @keyframe move {
+    from {
+        background-position: 2px 1rem;
+      }
+      to {
+        background-position: 500px 1rem;
+      }
+    }
+
+
     &:not(.tag-link) {
-      // text-decoration: none;
-      // background-image: linear-gradient(var(--highlight), var(--highlight));
-      // background-position: 50% 80%;
-      // background-repeat: no-repeat;
-      // background-size: 100% 6px;
-      // padding: 0 0.1rem;
-      // border-radius: 5px;
-      // line-height: 1.4rem;
-      background: linear-gradient(45deg, rgb(135, 124, 219) 0%,rgb(183, 113, 211) 42.86%,rgb(255, 111, 202) 100%) no-repeat right bottom / 0 var(--bg-h);
-      transition: background-size 450ms, color 450ms;
-      --bg-h: 3px;
       color: var(--quaternary);
       &:hover {
-        background-size: 100% var(--bg-h);
-        background-position-x: left;
         color: var(--secondary);
       }
     }
@@ -145,22 +151,12 @@ a {
       border-radius: 0;
       padding: 0;
     }
-    &.tag-link {
-      &::before {
-        content: "#";
-      }
-    }
-  }
 
   &.external {
     color: var(--tertiary);
-    background: linear-gradient(45deg, rgb(135, 124, 219) 0%,rgb(136, 145, 201) 42.86%, rgb(126, 185, 240) 100%) no-repeat right bottom / 0 var(--bg-h);
-    transition: background-size 450ms, color 450ms;
-    --bg-h: 3px;
+
     &:hover {
-      background-size: 100% var(--bg-h);
-      background-position-x: left;
-      color: var(--secondary);
+      color: var(--quaternary);
     }
   }
 
@@ -172,7 +168,14 @@ a {
       fill: var(--dark);
     }
   }
+
+  &.tag-link {
+    &::before {
+      content: "#";
+    }
+  }
 }
+
 
 .flex-component {
   display: flex;
@@ -451,6 +454,28 @@ h2 {
   font-size: 1.4rem;
   margin-top: 1.9rem;
   margin-bottom: 1rem;
+}
+
+h2 a.tag-link {
+  background-size: 1.2rem 1.9rem!important;
+}
+
+h3 a.internal {
+  display: inline-block;
+  background-size: 1.1rem 1.2rem!important;
+}
+
+.page-title a {
+  background-size: 1.6rem 2.7rem;
+  padding-bottom: 1em;
+}
+
+.go-back a {
+  padding-bottom: 1em;
+}
+
+.meta time {
+  vertical-align: sub;
 }
 
 h3 {

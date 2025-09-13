@@ -2,7 +2,7 @@
 tags: [language_learning, linux, scripts]
 publish: true
 created: 2025-07-19T20:26:46.4646-05:00
-modified: 2025-09-03T00:10:09.099-05:00
+modified: 2025-09-13T00:13:33.3333-05:00
 aliases: [ocr]
 ---
 

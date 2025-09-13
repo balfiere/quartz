@@ -1,7 +1,7 @@
 ---
 created: 2025-07-18T18:03:37.3737-05:00
-modified: 2025-07-19T00:24:28.2828-05:00
-tags: [language_learning, linux]
+modified: 2025-09-13T00:12:46.4646-05:00
+tags: [media/audio, language_learning, linux]
 publish: true
 ---
 
@@ -10,7 +10,7 @@ i use ffmpeg to normalize the audio of my media files, particularly anything i w
 
 ## batch normalize audio files
 
-to batch normalize audio files, install [ffmpeg-normalize](https://github.com/slhck/ffmpeg-normalize) using `pip install ffmpeg-normalize`. inside the folder, run"
+to batch normalize audio files, install [ffmpeg-normalize](https://github.com/slhck/ffmpeg-normalize) (for example, `pip install ffmpeg-normalize` in ubuntu-based distros). inside the folder, run
 
 ```bash
 ffmpeg-normalize *.mp3 -c:a libmp3lame -ext mp3 -pr
