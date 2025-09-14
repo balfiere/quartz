@@ -1,10 +1,17 @@
 ---
-tags: [language_learning, linux, scripts]
+tags:
+  - language_learning
+  - linux
+  - scripts
 publish: true
 created: 2025-07-19T20:26:46.4646-05:00
-modified: 2025-09-13T00:13:33.3333-05:00
-aliases: [ocr]
+
+aliases:
+  - ocr
+updated: 2025-09-13T23:56:57.5757-05:00
 ---
+
+# ocr for language learning
 
 the following are the programs and scripts i use to make looking up words easier when reading manga, webtoons, or books in pdf format.
 
@@ -113,7 +120,7 @@ magick *.png -quality 100 processed.pdf
 
 ### thai only: python_thai_ocr
 
-i typically prefer using [python_thai_ocr](https://github.com/nanonymoussu/python_thai_ocr/tree/main) over `ocrmypdf`, i find it gives more accurate results (even though they both use tesseract... idk what's up with that). the github page has instructions on how to use it, but i find that it often crashes and uses tons of cpu power when running on pdfs compared to images. to bypass the issue, i instead turn the pdf into a folder of images (if they aren't already just images) and simply run a script that processes each image individually, appending the output of each page to a text file: 
+i typically prefer using [python_thai_ocr](https://github.com/nanonymoussu/python_thai_ocr/tree/main) over `ocrmypdf`, i find it gives more accurate results (even though they both use tesseract… idk what's up with that). the github page has instructions on how to use it, but i find that it often crashes and uses tons of cpu power when running on pdfs compared to images. to bypass the issue, i instead turn the pdf into a folder of images (if they aren't already just images) and simply run a script that processes each image individually, appending the output of each page to a text file: 
 
 ```bash
 #!/bin/bash

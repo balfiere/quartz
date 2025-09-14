@@ -15,8 +15,8 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "kwaamfan.neocities.org/notes",
-    ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "modified",
+    ignorePatterns: ["**/private", "templates", ".obsidian", "*.base"],
+    defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
@@ -27,7 +27,7 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#f2efefff",
+          light: "#fbf8f5;",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
@@ -39,7 +39,7 @@ const config: QuartzConfig = {
           textHighlight: "#6b42267a",
         },
         darkMode: {
-          light: "#161616ff",
+          light: "#1a1918",
           lightgray: "#393639",
           gray: "#646464",
           darkgray: "#d4d4d4",
@@ -61,17 +61,17 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "tokyo-night",
-          dark: "tokyo-night",
+          light: "rose-pine-dawn",
+          dark: "rose-pine-moon",
         },
         keepBackground: true,
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: true }),
-      Plugin.GitHubFlavoredMarkdown(),
+      // Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "relative" }),
       Plugin.Description(),
-      Plugin.Latex({ renderEngine: "katex" }),
+      // Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [
       Plugin.ExplicitPublish(),
@@ -83,7 +83,7 @@ const config: QuartzConfig = {
       Plugin.FolderPage(),
       Plugin.TagPage(),
       Plugin.ContentIndex({
-        enableSiteMap: false,
+        enableSiteMap: true,
         enableRSS: true,
       }),
       Plugin.Assets(),

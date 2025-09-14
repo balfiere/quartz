@@ -1,9 +1,15 @@
 ---
 created: 2025-07-18T18:03:37.3737-05:00
-modified: 2025-09-13T00:12:46.4646-05:00
-tags: [media/audio, language_learning, linux]
+
+tags:
+  - language_learning
+  - linux
+  - media/audio
 publish: true
+updated: 2025-09-13T23:56:57.5757-05:00
 ---
+
+# normalizing audio
 
 
 i use ffmpeg to normalize the audio of my media files, particularly anything i want to [sentence mine](https://tatsumoto-ren.github.io/blog/sentence-mining.html). i also like to normalize my anki media folder every month or so. be sure you're on an up-to-date build of ffmpeg to use the following methods. (see [[updating ffmpeg]] for how i updated ffmpeg on pop os, which should work on other debian based distributions)
@@ -16,7 +22,7 @@ to batch normalize audio files, install [ffmpeg-normalize](https://github.com/sl
 ffmpeg-normalize *.mp3 -c:a libmp3lame -ext mp3 -pr
 ```
 
-[mp3gain](https://mp3gain.sourceforge.net/index.php) can be used change gain without the need to reencode the track. i like to use this in my anki media folder since it is much faster than ffmpeg-normalize. the link has downloads for windows, but on linux it can be installed from your distro's repository. to run from the command line:
+[mp3gain](https://mp3gain.sourceforge.net/index.php) can be used change gain without the need to re-encode the track. i like to use this in my anki media folder since it is much faster than ffmpeg-normalize. the link has downloads for windows, but on linux it can be installed from your distro's repository. to run from the command line:
 
 ```bash
 mp3gain -r -k -s r *.mp3

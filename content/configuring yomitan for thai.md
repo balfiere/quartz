@@ -1,9 +1,13 @@
 ---
-tags: [language_learning/thai]
+tags:
+  - language_learning/thai
 publish: true
 created: 2025-07-19T16:30:07.077-05:00
-modified: 2025-07-19T16:40:47.4747-05:00
+
+updated: 2025-09-13T23:56:57.5757-05:00
 ---
+
+# configuring yomitan for thai
 
 ## dictionaries
 
@@ -21,7 +25,7 @@ the dictionaries i use are:
 - jones th-en
 - abbreviations th-th
 
-the unlinked dictionaries were sourced from [thai dictionaries project](https://thaidictproject.wixsite.com/website/thai-dictionaries?lang=en) and converted using [pyglossary](https://github.com/ilius/pyglossary). you can download all these dictionaries in one file [here](https://mega.nz/file/tE8ljJDI#QcdJseebIbIiT7wR99oxblF14S0QkriZzjq8dNVfG1I). to import, go to the settings page of yomitan, scroll down to "backup", click "import dictionary collection", then select the json file downloaded earlier. to enable them, scroll up to "dictionaries" then click on "configure installed and enabled dictionaries...". enable all of them. i recommend putting the kaikki dictionaries on top since they have the best coverage and nicest formatting imo.
+the unlinked dictionaries were sourced from [thai dictionaries project](https://thaidictproject.wixsite.com/website/thai-dictionaries?lang=en) and converted using [pyglossary](https://github.com/ilius/pyglossary). you can download all these dictionaries in one file [here](https://mega.nz/file/tE8ljJDI#QcdJseebIbIiT7wR99oxblF14S0QkriZzjq8dNVfG1I). to import, go to the settings page of yomitan, scroll down to "backup", click "import dictionary collection", then select the json file downloaded earlier. to enable them, scroll up to "dictionaries" then click on "configure installed and enabled dictionaries…". enable all of them. i recommend putting the kaikki dictionaries on top since they have the best coverage and nicest formatting imo.
 
 ## yomitan settings
 

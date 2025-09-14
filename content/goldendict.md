@@ -1,9 +1,13 @@
 ---
-tags: [language_learning]
+tags:
+  - language_learning
 publish: true
 created: 2025-07-19T20:27:54.5454-05:00
-modified: 2025-09-03T00:09:56.5656-05:00
+
+updated: 2025-09-13T23:56:57.5757-05:00
 ---
+
+# goldendict
 
 [goldendict-ng](https://xiaoyifang.github.io/goldendict-ng/) is a program for windows, mac, and linux that allows the user to install their own dictionaries to look up words instantly. even though i mainly use yomitan to look words up in a browser, i still find it handy to have another dictionary service to fall back on when i want to looking something up outside of my browser.
 
@@ -11,7 +15,7 @@ i highly recommend reading [tatsumoto's guide](https://tatsumoto.neocities.org/b
 
 ## dictionaries
 
-install dictionaries by opening goldendict, clicking "edit" > "dictionaries..." then under "sources" > "files" add the folder that has all the dictionaries you've downloaded. if you want go to "wikipedia" and add the wikitionary of your target language (i recommend adding thai if you're studying it). if you're studying multiple languages i recommend clicking on "groups" and sorting your dictionaries based on target language.
+install dictionaries by opening goldendict, clicking "edit" > "dictionaries…" then under "sources" > "files" add the folder that has all the dictionaries you've downloaded. if you want go to "wikipedia" and add the wikitionary of your target language (i recommend adding thai if you're studying it). if you're studying multiple languages i recommend clicking on "groups" and sorting your dictionaries based on target language.
 
 a huge repository of dictionaries for many languages can be found [here](https://cloud.freemdict.com/index.php/s/pgKcDcbSDTCzXCs).
 

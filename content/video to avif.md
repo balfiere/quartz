@@ -1,9 +1,15 @@
 ---
 created: 2025-07-18T17:54:40.4040-05:00
-modified: 2025-09-13T00:22:42.4242-05:00
-tags: [media/image, media/video, site_building]
+
+tags:
+  - media/image
+  - media/video
+  - site_building
 publish: true
+updated: 2025-09-13T23:56:57.5757-05:00
 ---
+
+# video to avif
 
 
 i use avif files on my site wherever i want to convert a video to an animated image. avif files are significantly smaller than gifs while retaining much more quality, have pretty good support on modern browsers, can be used with the `img` html tag, and are able to be hosted on neocities even on free accounts. the backgrounds for my [places](../places) page, for example, use avif but fall back to jpg if avif isn't supported.

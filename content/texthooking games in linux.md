@@ -1,9 +1,14 @@
 ---
-tags: [language_learning, linux]
+tags:
+  - language_learning
+  - linux
 publish: true
 created: 2025-07-19T22:23:15.1515-05:00
-modified: 2025-07-19T22:50:09.099-05:00
+
+updated: 2025-09-13T23:56:57.5757-05:00
 ---
+
+# texthooking games in linux
 
 ## installing games
 

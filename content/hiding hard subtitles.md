@@ -1,10 +1,15 @@
 ---
 created: 2025-07-18T16:49:59.5959-05:00
-modified: 2025-07-19T16:45:12.1212-05:00
+
 publish: true
 title: hiding hard subtitles
-tags: [language_learning, linux]
+tags:
+  - language_learning
+  - linux
+updated: 2025-09-13T23:56:57.5757-05:00
 ---
+
+# hiding hard subtitles
 
 
 i use the python program [subtitle hider](https://github.com/Bennycopter/subtitle-hider) to blur english subtitles hardcoded into videos i want to watch in a language i'm learning. under "releases" there's also a precompiled windows .exe. since it creates a new window, it's compatible with any video player app, website, etc.

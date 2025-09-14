@@ -1,17 +1,23 @@
 ---
-tags: [11ty, site_building]
-publish: false
-created: 2025-09-13T00:03:55.5555-05:00
-modified: 2025-09-13T01:49:38.3838-05:00
+publish: true
+title: generating a webpage from json data with 11ty
+tags:
+  - json
+  - site_building/11ty
+  - tutorial
+created: 2025-09-13T23:24:15.1515-05:00
+updated: 2025-09-13T23:56:57.5757-05:00
 ---
 
-this is a tutorial on how i generate my [articles](https://kwaamfan.neocities.org/articles/) page from a json file using eleventy. it assumes you already have eleventy installed; if not, [this tutorial](https://whiona.weblog.lol/2023/10/my-neocities-workflow-using-eleventy-and-the-cli-to-speed-up-development) is good at walking you through the initial set up. knowing some basic programming concepts, particularly for loops and arrays, is recommended, but i've tried to explain things so you can still follow along even if you've never programmed before.
+# building a web page with json data using 11ty
+
+this is a tutorial on how i generate my [articles](https://kwaamfan.neocities.org/articles/) page from a [[json]] file using eleventy. it assumes you already have eleventy installed; if not, [this tutorial](https://whiona.weblog.lol/2023/10/my-neocities-workflow-using-eleventy-and-the-cli-to-speed-up-development) is good at walking you through the initial set up. knowing some basic programming concepts, particularly for loops and arrays, is recommended, but i've tried to explain things so you can still follow along even if you've never programmed before.
 
 ## benefits
 
-if a page has many elements with the same format (a microblog, changelog, image gallery, review page, etc) it may be cumbersome to copy and paste the repeated elements every time you want to add something new, especially if you use complicated formatting with lots of nested `divs` and whatnot. storing the unique data in json makes it easier to write new content and modify old content without having to muck about in the weeds of html. if you decide to change your layout, it also makes it 10000% easier to do so: just change your template file, rebuild your page with eleventy, and your new layout is applied to all entries — no need to edit each element manually or mess around with regex.
+if a page has many consecutive elements with the same format (a microblog, changelog, image gallery, review page, etc) it may be cumbersome to copy and paste the repeated elements every time you want to add something new, especially if you use complicated formatting with lots of nested `divs` and whatnot. for more information, see [[json#why use json on my site?]]
 
-while you can use javascript to load json data (and i have a tutorial on how to do so [[using javascript to load data from a json file|here]]), i prefer this method for data that is the focus of the given page and saving the javascript for smaller, less critical things. this keeps the page viewable for users with javascript disabled and improves performance.
+while you can use javascript to load json data (and i have a tutorial on how to do so [[using javascript to load data from a json file|here]]), i prefer this method for data that is the focus of the given page and saving the javascript for smaller, less critical things. this keeps the page viewable for users with javascript disabled and improves performance. using eleventy also has the benefit of having a syntax much closer to plain html. this makes it easier to use for people who don't know javascript.
 
 ## the json file
 
@@ -47,7 +53,7 @@ for this example the contents of `articles.json` look like this:
 }
 ```
 
-`articles` is the "key", the name we will call in our function in order to access the data it stores. the data is stored in an [array](https://www.w3schools.com/js/js_json_arrays.asp) of arrays, denoted by the square brackets. you could use [objects](https://www.w3schools.com/js/js_json_objects.asp) if you prefer to name each individual value, but i think it's easier to write out the values in the same order instead of remembering to write out the key each time, and keeps the json file less cluttered.
+`articles` is the "key", the name we will call in our function in order to access the data it stores. the data is stored in an [array](https://www.w3schools.com/js/js_json_arrays.asp) of arrays, denoted by the square brackets. you could use [objects](https://www.w3schools.com/js/js_json_objects.asp) if you prefer to name each individual value, but i think it's easier to write out the values in the same order instead of remembering to write out the key each time. it also keeps the json file less cluttered and easier to read and edit.
 
 ## the template file
 
@@ -103,7 +109,7 @@ some code that gets repeated for the number of elements in the object
 
 [Iteration – Liquid template language](https://shopify.github.io/liquid/tags/iteration/)
 
-so we can put the `<article>` element described above inside the tags, replacing `object` with the name of the our object `articles` and optionally renaming `element` to `article` to get
+so we can put the `<article>` element described above inside the tags, replacing `object` with the name of the object `articles` and optionally renaming `element` to `article` to get:
 
 ```html
 {% for article in articles %}
@@ -117,7 +123,7 @@ so we can put the `<article>` element described above inside the tags, replacing
 {% endfor %}
 ```
 
-in our `articles.json`, the array `articles` has three elements, so the loop will repeat three times. but as it stands now, we'll have three `<article>` elements all with the same data — we want to make the title, author, description, and url unique for each `<article>`. in order to get the unique data of our json file, we need to use variables. in liquid, these are called [objects](https://shopify.github.io/liquid/basics/introduction/#objects) and are denoted with double curly brackets `{{` and `}}`.
+in `articles.json`, the array `articles` has three elements, so the loop will repeat three times. but as it stands now, we'll have three `<article>` elements all with the same data — what we actually want is to make the title, author, description, and url unique for each `<article>`. in order to get the unique data of our json file, we need to use variables. in liquid, these are called [objects](https://shopify.github.io/liquid/basics/introduction/#objects) and are denoted with double curly brackets `{{` and `}}`.
 
 inside the loop at iteration `i`, `article` is the element at index `articles[i]`. so the first time the loop runs, `i` = 0 and `article` = `articles[0]` = `["title 1", "author 1", "description 1", "url 1"]`. since `article` is also an array, we can access each element using `article[i]`. for example, to get the author name `author 1` we would use `article[1]`.
 
@@ -176,7 +182,7 @@ to compile just the page in the articles folder, set your working directory to y
 npx @11ty/eleventy --input=articles --output=_site/articles
 ```
 
-your new file will then be located in `_site/articles`. you could of course just use `npx @11ty/eleventy`, but i'd rather not wait for eleventy to build every subdirectory when i only want to change a single page.
+your new file will then be located in `_site/articles`. you could of course just use `npx @11ty/eleventy` to build your whole site, but i'd rather not wait for eleventy to build every subdirectory when i only want to change a single page.
 
 if you're like me and use [deploy-to-neocities: 🐈 Github Action to deploy a folder to Neocities](https://github.com/bcomnes/deploy-to-neocities) or otherwise like to keep your site folder outside of your eleventy folder, you could alias a command such as
 
@@ -186,7 +192,7 @@ npx @11ty/eleventy --input=articles --output=_site/articles
 cp -a _site/articles/index.html ../public/articles/
 ```
 
-to copy your compiled file over, where `public` is a folder next to `eleventy` and is the main folder of your site.
+to copy your compiled file over, where `public` is a folder next to `eleventy` and is the main folder of your site that gets uploaded by deploy-to-neocities.
 
 the final file looks like
 

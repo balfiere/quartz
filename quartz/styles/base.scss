@@ -91,6 +91,8 @@ a {
   color: var(--secondary);
   &:hover {
     color: var(--tertiary);
+    // only add animated wave underline if prefers reduced motion is not enabled
+    @media (prefers-reduced-motion: no-preference) {
     --svg: url('data:image/svg+xml,\
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.3 6">\
         <path class="st0" d="M-5.5,3.8C-4.2,4.8-2.8,6,0,6s4.2-1.2,5.5-2.2C6.6,2.8,7.6,2,9.7,2s3,0.8,4.2,1.8c1.3,1,2.7,2.2,5.5,2.2  s4.2-1.2,5.5-2.2l-1.4-0.9c-1.1,1-2.1,1.8-4.2,1.8s-3-0.8-4.2-1.8c-1.2-1-2.7-2.2-5.4-2.2c-2.8,0-4.2,1.2-5.5,2.2  C3,3.9,2.1,4.7,0,4.7s-3-0.8-4.2-1.8L-5.5,3.8z" fill="saddlebrown"/>\
@@ -109,6 +111,7 @@ a {
       background-color: transparent;
       -webkit-text-decoration-skip: objects;
       animation-play-state: running;
+    }
   }
 
     @-webkit-keyframes move {
@@ -233,6 +236,16 @@ a {
 
     p > strong {
       color: var(--dark);
+    }
+
+    a {
+      text-decoration: underline;  text-underline-offset: 0.4rem;
+      // hide underline on hover only if wave animation is enabled
+      @media (prefers-reduced-motion: no-preference) {
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -458,11 +471,12 @@ h2 {
 
 h2 a.tag-link {
   background-size: 1.2rem 1.9rem!important;
+  padding-bottom: 1rem;
 }
 
 h3 a.internal {
   display: inline-block;
-  background-size: 1.1rem 1.2rem!important;
+  background-size: 1.1rem 1.1rem!important;
 }
 
 .page-title a {
