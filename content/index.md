@@ -1,10 +1,13 @@
 ---
+aliases:
+  - welcome to my notebook
 created: 2025-07-17T22:32:06.066-05:00
 
 tags: []
 publish: true
 title: welcome to my notebook
-updated: 2025-09-14T00:22:44.4444-05:00
+updated: 2025-09-14T00:58:15.1515-05:00
+linter-yaml-title-alias: welcome to my notebook
 ---
 
 # welcome to my notebook
