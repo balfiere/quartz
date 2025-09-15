@@ -1,0 +1,4 @@
+---
+title: linux
+publish: true
+---

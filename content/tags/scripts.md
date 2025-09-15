@@ -1,0 +1,4 @@
+---
+title: scripts
+publish: true
+---

@@ -1,0 +1,4 @@
+---
+title: thai
+publish: true
+---
