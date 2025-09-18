@@ -10,7 +10,7 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "kwaamfan's notes",
     pageTitleSuffix: "",
-    enableSPA: false,
+    enableSPA: true,
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
@@ -57,7 +57,7 @@ const config: QuartzConfig = {
     transformers: [
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "git", "filesystem"],
+        priority: ["filesystem", "frontmatter", "git"],
       }),
       Plugin.SyntaxHighlighting({
         theme: {
@@ -67,9 +67,13 @@ const config: QuartzConfig = {
         keepBackground: true,
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: true }),
-      // Plugin.GitHubFlavoredMarkdown(),
+      Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.CrawlLinks({
+        markdownLinkResolution: "relative",
+        openLinksInNewTab: true,
+        lazyLoad: true,
+      }),
       Plugin.Description(),
       // Plugin.Latex({ renderEngine: "katex" }),
     ],

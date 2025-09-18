@@ -10,16 +10,19 @@ export const sharedPageComponents: SharedLayout = {
       component: Component.RecentNotes({
         limit: 5,
         linkToMore: "tags/index",
-        title: "recently updated"
+        title: "recently updated",
+        // filter: (f) => f.slug !== "tags",
+        // don't show pages whose slug starts with tags
+        filter: (f) => !f.slug?.startsWith("tags"),
       }),
       condition: (page) => page.fileData.slug == "index",
     })
   ],
   footer: Component.Footer({
     links: {
-      "landing": "/",
-      "personal site home": "/main/",
-      "resources site home": "/resources/",
+      "landing": "https://kwaamfan.neocities.org/",
+      "personal site home": "https://kwaamfan.neocities.org/main/",
+      "resources site home": "https://kwaamfan.neocities.org/resources/",
       "neocities profile": "https://neocities.org/site/kwaamfan"
     },
   }),
@@ -56,6 +59,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
+    Component.DesktopOnly(Component.TableOfContents()),
+    Component.Backlinks(),
     Component.ConditionalRender({
       component: Component.Graph({
       localGraph: {
@@ -90,8 +95,6 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
   ],
 }
 
