@@ -672,3 +672,34 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     cleanupGlobalGraphs()
   })
 })
+
+function toggleGraph(this: HTMLElement) {
+  this.classList.toggle("collapsed")
+  console.log(this.classList.contains("collapsed"))
+  this.setAttribute(
+    "aria-expanded",
+    this.getAttribute("aria-expanded") === "true" ? "false" : "true",
+  )
+  const content = this.nextElementSibling as HTMLElement | undefined
+  if (!content) return
+  content.classList.toggle("collapsed")
+}
+
+function setupGraph() {
+  for (const graph of document.getElementsByClassName("graph")) {
+    const button = graph.querySelector(".graph-header")
+    const content = graph.querySelector(".graph-outer")
+    if (!button || !content) return
+    button.addEventListener("click", toggleGraph)
+    window.addCleanup(() => button.removeEventListener("click", toggleGraph))
+  }
+}
+
+document.addEventListener("nav", () => {
+  setupGraph()
+
+  // update toc entry highlighting
+  // observer.disconnect()
+  // const headers = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]")
+  // headers.forEach((header) => observer.observe(header))
+})
