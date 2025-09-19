@@ -11,8 +11,6 @@ export const sharedPageComponents: SharedLayout = {
         limit: 5,
         linkToMore: "tags/index",
         title: "recently updated",
-        // filter: (f) => f.slug !== "tags",
-        // don't show pages whose slug starts with tags
         filter: (f) => !f.slug?.startsWith("tags"),
       }),
       condition: (page) => page.fileData.slug == "index",
