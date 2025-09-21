@@ -7,11 +7,14 @@ created: 2025-07-17T22:32:06.066-05:00
 updated: 2025-09-14T00:58:15.1515-05:00
 ---
 
-# welcome to my notebook
+<picture>
+	<source srcSet="assets/ccs.jpg" media="(prefers-reduced-motion)" />
+	<img src="assets/ccs.avif" alt="sakura kinomoto from cardcaptor sakura writing at her desk" />
+</picture>
 
-this section of my site is a repository of random notes mostly related to [[tags/language/learning|language learning]] , [[tags/site_building]] , and [[tags/linux]] . i'm pretty bad at remember how i did things or the exact names of commands, so i end up documenting everything i do so i can replicate things later. most of the improvements and optimizations i'Tve made to my site were made after coming across blog posts and coding tip sections on random peoples sites, and i've found reading other people's documentation of their own workflow to be extremely helpful in learning how to use tools like eleventy and deploy to neocities, so i thought i ought to pay it back and [learn in public](https://www.swyx.io/learn-in-public) for anyone who may stumble across my own website.
+**welcome to my notebook!** this section of my site is a subset of my obsidian vault, where i share random notes mostly related to [[tags/language/learning|language learning]], [[tags/site_building|site building]], and [[tags/linux]]. i'm pretty bad at remember how i did things or the exact names of commands, so i end up documenting everything i do so i can replicate things later. most of the improvements and optimizations i've made to my site were made after coming across blog posts and coding tip sections on random peoples sites, and i've found reading other people's documentation of their own workflow to be extremely helpful in learning how to use tools like eleventy and deploy to neocities, so i thought i ought to pay it back and [learn in public](https://www.swyx.io/learn-in-public) for anyone who may stumble across my own website.
 
-to browse pages by tags, see [[tags|the tags index]].
+to browse pages by tags, see [[tags|the tags index]]. to browse notes in reverse chronological order, see [[030-my-notes|the folder index]]. dates displayed are based on the when the file was initially created on my computer.
 
 currently used top level tags:
 
