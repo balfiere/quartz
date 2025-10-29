@@ -1,3 +1,27 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+article {
+    // display: flex;
+    // flex-direction: column;
+    p {
+
+        picture,
+        img {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    picture,
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+    figure {
+        picture, img {
+            margin: unset;
+            display: unset;
+        }
+    }
+}
