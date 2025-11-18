@@ -9,10 +9,8 @@ export const sharedPageComponents: SharedLayout = {
   ],
   footer: Component.Footer({
     links: {
-      "landing": "https://kwaamfan.neocities.org/",
-      "personal site home": "https://kwaamfan.neocities.org/main/",
-      "resources site home": "https://kwaamfan.neocities.org/resources/",
-      "neocities profile": "https://neocities.org/site/kwaamfan"
+      "back to notebook home": "/notes/",
+      "back to personal site": "/",
     },
   }),
 }

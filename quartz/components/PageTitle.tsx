@@ -11,7 +11,7 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
       <h2 class={classNames(displayClass, "page-title")}>
         <a href={baseDir}>{title}</a>
       </h2>
-      <h4 class="go-back"><a href="https://kwaamfan.neocities.org/main/">back to personal site home</a></h4>
+      <h4 class="go-back"><a href="/">back to personal site home</a></h4>
     </div>
   )
 }

@@ -10,11 +10,11 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "kwaamfan's notes",
     pageTitleSuffix: "",
-    enableSPA: true,
+    enableSPA: false,
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "kwaamfan.neocities.org/notes",
+    baseUrl: "kwaamfan.xo.je/notes",
     ignorePatterns: ["**/private", "templates", ".obsidian", "*.base"],
     defaultDateType: "modified",
     theme: {

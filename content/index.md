@@ -27,3 +27,4 @@ currently used top level tags:
 - [[tags/scripts]]
 - [[tags/site_building]]
 - [[tags/tutorial]]
+- [[tags/fiber_arts]]
