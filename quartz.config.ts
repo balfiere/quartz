@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "kwaamfan.xo.je/notes",
+    baseUrl: "kwaamfan.haliya.net/notes",
     ignorePatterns: ["**/private", "templates", ".obsidian", "*.base"],
     defaultDateType: "modified",
     theme: {
