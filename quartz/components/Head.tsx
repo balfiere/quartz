@@ -85,7 +85,7 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
-        <script src="https://analytics.cetacean-halfmoon.ts.net/api/script.js" data-site-id="5b238757d141" defer async></script>
+        <script src="https://rybbit.cetacean-halfmoon.ts.net/api/script.js" data-site-id="5b238757d141" defer async></script>
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
